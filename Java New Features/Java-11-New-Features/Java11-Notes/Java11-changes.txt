@@ -1,0 +1,96 @@
+
+==============================
+Java-11 => Compile Free Lunch 
+==============================
+	-> From Java 11, java provides flexibility to run java code without compilation 
+
+        -> We can execute java code in a single step
+
+        -> Use single command java filename.java and it will execute the file by producing
+           desired result
+
+          public class A {		=> java A(file name).java
+               public static void main(String[] args){
+             	     Sop("hi");
+               }
+          }
+
+=============================
+Java-11 => New String Method
+=============================
+     -> Java 11 introduced a few new method to String class
+
+     1. isBlank() => this method is used to check weather a string is blank or not
+
+                  => Empty string and string with just white space are considered blank
+
+     2. lines()   => This method split a string using line terminators and return a stream
+
+                  => Return the stream of lines of multi-line string
+
+     3. repeat()  => This method is used to duplicate or repeat a string
+
+     4. stripLeading => It uses to remove the all leading white space from a string and it 
+                        return a new string
+
+     5. stripTrailing => This method is used to remove all trailing white spaces from a string
+                         and returns new string
+
+=========================
+Java-11 => Var in Lambda 
+=========================
+     -> Java 11 allows to use var in a lambda expression and it can be used to apply modifies to 
+        local variables
+
+     -> Java compiler infers the type of variable at compile time
+
+     -> It is introduced in java 10 and var is not a keyword
+
+     -> var can be used in loops and you can't assign null to var 
+
+     Note => There are some certain limitations on using var in lambda
+
+          1. => var parameters can't be mixed with other parameters. It will throw compilation error
+
+          2. => (var v1, v2) -> v1+v2 var parameter can't be mixed with other types parameters
+
+          3. => (var v1, String v2 ) -> v1 + v2 var parameters can only by used with parenthecis
+
+===============================
+Java-11 => Collection To Array 
+===============================
+     -> Java 11 introduced a new method in the collection interface toArray(int function generator) method
+
+     -> This method uses to convert a collection into an array
+
+     -> The toArray() method is an overloaded method
+
+          Syntax :: BArray = AList.toArray(String[]::new);
+
+=========================
+Java-11 => Not Predicate 
+=========================
+     -> Java 11 introduced new method to Predicate interface as not() to negate an existing predicate similar
+        to negate method
+
+==========================
+Java-11 => Optional class 
+==========================
+	-> Optional class has isEmpty() to check if value is present
+
+        -> isEmpty() returns false if value is present otherwise true
+
+        -> It can be used as an alternative of isPresent() method which 
+           often needs to negate to check if value is not present 
+
+
+
+
+
+
+
+
+
+
+
+

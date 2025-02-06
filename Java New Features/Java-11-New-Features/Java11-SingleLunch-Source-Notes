@@ -1,0 +1,28 @@
+
+	Upto Java-10 Version
+	--------------------
+	>javac Test.java	=> Compilation Process
+		|-> verifies syntax
+		
+		|-> If any syntax mistakes
+			1. compiler throws error and 
+			2. terminates compilation
+		
+		|-> If no syntax mistakes 
+			1. generates byte code
+			2. saves that byte code in Test.class file
+			
+	>java Test			=> Execution Process
+		|-> JVM searches Test.class
+		
+		|-> If Test.class file is not found,
+			1. JVM throw exception CNFE
+			2. Terminates the execution
+			
+		|-> If Test.class is found
+			1. JVM reads byte code from Test.class file
+			2. Loads that byte code into JVM memory
+			3. Starts its execution with SV, SB and then main method
+			4. If main method not found then its throw exception
+			
+	

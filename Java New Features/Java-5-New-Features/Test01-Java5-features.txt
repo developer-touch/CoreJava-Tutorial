@@ -1,0 +1,48 @@
+
+Java 5V new Features
+==================
+	1.Autoboxing and Auto unboxing
+	2.Generic
+	3.for-each loop/enhanched for loop
+	4.var-arg
+	5.enum
+	6.annotation
+
+Wrapper Class =>
+==============
+	1.What is the WC,Why WC , How many WCs ?
+	
+ 	============================================================
+  		PDT					WCs
+ 	============================================================
+  		byte				Byte---------------\
+ 	 	short				Short--------------  \
+  		int				Integer------------   \----->Number-------> Object
+  		long				Long---------------   /                          /
+  		float				Float--------------  /                           /
+  		double			Double-------------/                          /
+  		char				Character--------------------------------/
+  		boolean			Boolean---------------------------------/
+  											       /  	
+  		void				Void ---------------------------------/		
+
+	2.Differenent operations we can perform by using WCs ?
+		1.PV		>>>>	WCO	->constructor(pdt) or static valueOf(pdt)
+		2.WCO	>>>>	PV		->wco.xxxValue()
+		3.PSO	>>>>	WCO	->constructor(String) or static valueOf(String)
+		4.PSO	>>>>	PV		->static WC.parseXxx(String)
+		5.WCO	>>>>	PSO		->wco.toString() -> overridden in all wcs to return state of WC object
+		6.PV		>>>>	PSO		->static wc.toString(pdt) ->WC own method
+
+	3.Compatibility and Comparison
+		1. == operator
+		2. equals() method
+
+	4.Boxing and Unboxing
+
+	5.Autoboxing and AUB
+
+	6.Need of AB and AUB
+
+	7.Object pooling and value range
+  

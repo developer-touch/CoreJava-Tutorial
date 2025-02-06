@@ -1,0 +1,25 @@
+		
+										Static Method In Interface
+								------------------------------------------------------------------------
+
+	=> Before Java 1.8, we can write only one type of method inside the interface 
+	     only the abstract method 
+	 
+	=> But fron onward java 1.8 we can write many type of method inside the 
+	     interface like -
+	     	1. abstract method
+		2. defualt method
+		3. static method
+
+	=> abstract method means we have must to implements the abstract class logic
+
+	=> defualt method means we can override that method inside the implementation 
+	     class.
+
+	=> The interface don't force to implements the default method inside the implementation
+	     class.
+
+	=> stattic method means, if we write static concreate method inside the interface then 
+	     we can't not override that  static method inside the implementation class 
+
+	=> static method also executed with interface name like class name ( class/interface.static method name)

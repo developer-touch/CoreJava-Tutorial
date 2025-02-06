@@ -1,0 +1,14 @@
+
+									============================
+										Java-8 Date And Time API
+									============================
+
+	> To overcome the problems of java.util.Date class java 1.8 introduced Date API changes
+
+	=> In java 1.8 version, new classes got introduced to deal with Date & Time functionalities
+
+				1) java.time.LocalDate  (it will deal with only date)
+
+				2) java.time.LocalTime  (it will deal with only time)
+
+				3) java.time.LocalDateTime (it will deal with both date & time)

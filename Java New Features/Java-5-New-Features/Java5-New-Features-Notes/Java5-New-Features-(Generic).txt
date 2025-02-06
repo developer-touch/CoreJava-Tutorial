@@ -1,0 +1,38 @@
+
+>>>>>>Java5 New Features  Generics<<<<<<
+---------------------------------------------------------------
+	-> Generic is a java 5v new features
+	-> This features is used for providing ' type safety '
+	-> It is used for providing 'type information' to the compiler
+
+	-> We want to provide the parameter type information during of instance creation but 
+	    not during of method definition, in this case we must create class and methos with 
+	    generic syntax
+
+	-> With the generic syntax we can pass 'parameter type' as argument at runtime at the 
+	     time of instance creation
+
+	-> With generic syntax, we can specify the allowed values or objects as argument based 
+	    on the instance
+
+	-> Basically generics syntax is used for 
+		1. Simplifying collection programming
+		2. Avoiding class cast exception
+		3. Avoiding the usage instanceof operator if condition
+		4. Gives fast execution
+
+	-> We can consider generic concept a label on a BOX on a BOOK
+		
+		1. BOX Collection
+			box1	 -> pallis
+			box2  -> kaju
+			box3  -> almond
+			box4  -> sugar
+			box5  -> salt 
+
+		2. BOOK Collection 
+			book1  -> Maths 
+			book2  -> Science
+			book3  -> Social 
+			book4  -> English 
+			book5  -> Hindi

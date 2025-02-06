@@ -1,0 +1,42 @@
+
+										============================
+											Java 1.8 V New Features 
+										============================
+
+	What Is Java 1.8 Features ?
+	=> In Java 1.8 there are so any changes come to simplify the java programming.
+	=> Before 1.8 there are only one ways of programming in java based on object 
+	=> But from 1.8 java introduced one more style of programming that is functional
+	     programming
+
+	What is the main Objective of Java 1.8 features ?
+	=> Simplifying Java Programming
+	=> Enable Functional Interface
+
+	Java 1.8 New Features List 
+	-------------------------------------
+	1. Interface changed		-> To imorove interface problem 
+		-> Default method
+		-> static method
+
+	2. Functional Interface	-> To implements Lambda Expression
+		-> Predicate
+		-> Consumer 
+		-> Supplier
+		-> Function
+
+	3. Lambda Expression	-> To simplify java programming
+
+	4. Method Reference Anf Costructor Reference		-> To simplify Lemba Expression
+
+	5. Stream API		-> To Precess the Collection data
+
+	6. Optional Class	-> To Avoid null pointer Excpetion
+
+	7. Spliterator
+
+	8. StingJoiner
+	
+	9. Collection Framework Changes
+
+	10. Date And Time API

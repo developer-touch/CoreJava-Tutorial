@@ -1,0 +1,274 @@
+
+	Fundamental Of Annotation
+	==========================
+		
+		1.MetaData
+		-----------
+			->It is data about data or information about inforamtion
+			
+			->Here either we gather data about existing data or we pass more data about data.
+			
+			#.In java programming we can do MetaData operation in multiple ways-
+				
+				Approach 1 : Using Comments
+							//holds the person age
+							private int age;
+							
+				Approach 2 : Using modifiers
+							private final float = 3.14f;
+							
+				Approach 3 : Using xml configuration
+				
+							=>cfg of servlet in web.xml using <servlet>,<servlet-mapping> tags
+							=>cfg of java classes as spring beans in spring bean cfg file
+							=>cfg of java classes as Entity classes in Hibernate mapping file
+							
+			Note : Approach1 and Approach 2 style MetaData opertions are good to pratice but xml
+				   files based Metadata operations are having some limitations.
+				   They are:-
+				   
+				   1.We need to java code(in .java file) and their MetaData(in .xml file) in two separate 
+				   	 fils it like the redability of java java code.
+				   
+				   2.To load and process xml file,we need to heavy weigth XML parse and xml API which kills
+				   	 the performance.
+				   	 
+				   3.In order to write xml files in any Technology/Framework based App,we need to understand
+				     the Technology/Framework supplied XSD/DTD rules.
+				     
+				   4.Xml is separate language to learn i.e it is not java.
+				   
+				   and etc..
+				   
+				   
+			Advantage :: 
+				
+				  	1.gives flexibillity of modification i.e without touching java code.we can pass input/
+				  	  metadata information to java code.
+				  	  
+		=>To overcome the limitations of XML file based MetaData operations, we need to go for annotations 
+		  we can be placed directly java source code.
+		  
+	Q.What is an Annotation ?
+	==========================
+		=>Annotations are java statementa that can be placed directly java source code to perform MetaData 
+		  operaiton directly in java source code itself.Thse are given to perform code about code operation.
+		  
+		  		Annotation syntax :
+		  			@<Annotation-name>(param1=value1,param2=value2,...)
+		  							  --------------------------------------
+		  							  		|->Annotation attribute/param/elements
+		  							  		
+		  		Note :=>Annotation can there with or without params.Annotation without is called 
+		  				Empty Annotation
+		  				
+		  				@Override,@Empty
+		  				
+		 =>Two types of Annotations
+		 ===========================
+		 
+		 	1.Annotation for API Documentation (from java 1.0)
+		 			@see,@author,@return,...
+		 		
+		 	2.Annotaion for Programming (java from java5/jdk1.5)
+		  			@Override,@suppreswarning,@Empty,@Component,@Bean	
+		  				
+		
+			1.ANNOTATION FOR API DOUCUMENTATION:-
+			------------------------------------
+				=>These annotation must be used along with API documentation comments(/**---*/) to hilight 
+				  in the documentation like Parameter,return type,see also,since,throws and etc.
+				  
+				  Example of Documentation annotations
+				  package com.annotation.documentation;
+				
+				/*
+				 *	Performs Arithmetic Operations like <b>sum,sub,mul,div</b> <br> and etc..
+				 *  @author ankit
+				 *	@since	1.0
+				 *	@see	java.lang.Math
+				 *
+				 */
+				public class DocumentationAnnotaion{
+					/**
+					*	<b><i>Performs sum operations</i></b>
+					*	@param a first value
+					*	@param b second value
+					*	@return returns the sum of the given number
+					*
+					*/
+				
+					public int sum(int a,int b){
+						return a+b;
+					}
+				}
+				
+		ANNOTATION FOR PROGRAMMING :-
+		-----------------------------
+			=>Given from java 5v
+			
+			=>All the java technologies and framework that are compitable java5+ supports annotation
+			  based programming (servlet3.x,spring2.x and etc)
+			  
+			=>Annotation internally the @interfaces having parameters/elements/attribute as the method
+			  declarations.
+			  
+			=>Underlying JVM or FW or Container and etc..provide functionalites for Annotation by 
+			  implementing these special @interface
+			  
+			   =>For the annotation supplied by jdk, the underlying JRE/JVM provides the functionality
+			   =>For the annotation supplied by Servlet, the underlying Servlet container provides the functionality
+			   =>For the annotation supplied by spring fw,the underlying spring container provides the functionality
+			   
+			=>For Empty Annotation, there willbe empty an @inteface
+				
+				@Target(ElementType.METHOD)
+				@Retention(RetentionPolicy.SOURCE)
+				public @interface Override{
+					
+				}
+				
+			=>While working any Programming annnotation,we need to gather two details
+				1.Target area of applicibility (Using @Target of annotation's source code)
+					->Tells where annotation can be applied llike method/filed/costructor and etc.)
+					
+				2.Retention/Retaining Level (Using @Retention of annotation's of source code)
+					->Tells whether annation will be recorded to .class file or not to provide functionality
+					
+				@Target Possible Value are 
+				============================
+				
+				/**Class,interface (including annotation type), or enum declation */
+				TYPE,
+				
+				/** Filed declaration (including enum constant) */
+				FILED,
+				
+				/**Method declaration */
+				METHOD,
+				
+				/**Formal parameter declaration */
+				PARAMETER,
+				
+				/**Construtor declaration */
+				CONSTRUCTOR,
+				
+				/**Local variable declaration */
+				LOCAL_VARIABLE
+				
+				/**Annotation type declaration */
+				ANNOTATION TYPE,
+				
+				/**Pacakge declaration */
+				PACKAGE,
+				
+				/**Type parameter declaration 
+				*
+				*	@since 1.8
+				*
+				*/
+				
+		@Retention Possible Value are 
+		==============================
+			/**
+			*	Annotation are to be discarded by the compiler
+			*						--------------------------
+			*/						(annotation will not recorded into java compiler)
+				
+			SOURCE,
+			/**
+			*	Annotation are to be recirded into the class file by the compiler 
+			* 	but not be retaines by the VM at run time.This is the default behavior.
+			*/
+			CLASS,
+			/**
+			*	Annotation are to be recorded in the class file by VM the compiler and 
+			*	retained by the VM at run time,so they may be read reflectivelt.
+			*	
+			*	@see java.lang.reflect.AnnotationElement
+			*/
+			RUNTIME
+			
+		
+		NOTE :=>@Override annotation target type ElementType.METHOD i.e
+				it can be applied only at method level
+				
+			 :=>@Override annotation Retention level RetentionPolicy.SOURCE i.e
+			 	it will not be recorded to .class file to provide the functionality
+			 	
+			 :=>@For any annotation, we can gether @Target and @Retention inforamtion using
+			 		1.source code of the annotation
+			 		2.API docs of the annotations
+			 		3.IDE help
+	
+		1.AnnotationProgramming->
+		-------------------------
+			=>@SuppressWarning annotation can supress warning that going be generated by java
+			  compiler.We need to specify type of warning in the "value" param(String[] of 
+			  @SuppressWarning Annotation.)
+			
+			import java.util.*;
+			
+			public class AnnotationProgramming {
+				private int a = 10;
+			
+				@Override
+				public String toString(){
+					return "a="+a;
+				}
+				//@SuppressWarnings(value={"unchecked"})
+				//@SuppressWarnings(value={"unchecked","deprecation"})
+				@SuppressWarnings({"unchecked","deprecation"})
+				//@SuppressWarnings("unchecked")
+				//@SuppressWarnings("deprecation")
+				public static void main(String[] args) 
+				{
+					AnnotationProgramming ap = new AnnotationProgramming();
+					System.out.println(ap);
+					System.out.println("********************************");
+					List list = new ArrayList();
+					list.add("a");
+					System.out.println(list);
+					System.out.println("********************************");
+					Date date = new Date();
+					System.out.println("Cuurent Month : "+date.getMonth());
+				}
+			}
+			
+			
+		Note :=>If you want to only one "Value" param of annotation then we can write its
+				data without specifying param name..
+				
+				@SuppressWarnings({"unchecked","deprecation"})
+				
+			 :=>If the annotation param is an array but we want to place only one 
+			    element value then{ } is optional.
+			    
+			    //@SuppressWarnings("unchecked")
+				//@SuppressWarnings("deprecation")
+				
+				
+		Advantage Of Annotation =>
+		===========================
+			1.We place them directly in java source code for code about code operations,
+			  so they improve readbility
+			  
+			2.No need of learing another language for meta operations 
+			
+			3.Debbuging becomes easy
+			
+			4.No performance issue because underlying JVM/Container/Framework istself 
+			  maintains Annotation Processor
+			  
+			5.Easy to learn and easy to use
+			
+			6.Supports 100% java code based programming
+			
+			7.Annotations are industry standard
+			
+			8.The metaData opetations take place directly on the java code
+		
+		Limitation Of Annotation =>
+		===========================
+			1.To change annotation based MetaData inforamtion,we need to modify soruce code 
+			  and recompilation is required.			 

@@ -1,0 +1,53 @@
+		
+					>>>>>>>>>>>>>>>>>>>>>>>>>>>Default-Methods<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	=> Upto java-7v inside interface we can create only below 3 members 
+		1. public static final class
+		2. public abstract methods
+		3. public static inner classes
+
+	=> From java-8v inside interface we can also create
+		4. public default implemented methods
+		5. public static implemented methods
+
+	=> From java-9v inside interface we can also create
+		6. private static implemeted methods
+		7. private non-static implemented methods
+
+	----------------------------------------------------------------
+	>>>>>Default Implementation Method<<<<<<<
+	----------------------------------------------------------------
+		-> The default method is a java 8v new features
+
+		-> It is an interface method which contains default implementation 
+
+		-> A method with implementation body in 'interface' with the keyword
+		    'default' is called default method
+
+		-> It is used for creating new methods in interface without forcing
+		    implementation classes to implement those method.
+
+		-> From Java 8v onwards in interface we can create types of methods 
+			1. A method without body that is 'public abstract method' to force
+			    implementation classes to implement it
+			2. A method with body that is 'public default implemented method'
+			    without forcing implementation classes to implement it
+
+		-> Then what is diiference b/w 'abstract class and Java 8v interface ?
+			-> Whatever the differences we have b/w AC and interface in upto 
+			    Java 7v same difference still we hava in Java 8v also
+
+			1. Java 8v interface still not have constructor and can not be instantiated
+			    either directly or via implementation class
+
+			2. Java 8v interface still support multiple type inheritance even though
+			    it have implementation methods.
+
+		=> For creation the default method we must use 'default' keyword (modifier)
+				public default <RT> <mN>(<PL> throws EL> {
+					---------------
+					------------------
+				}
+
+				-> public is optional, compiler will add it
+				-> default is mandatory,else compiler throws error

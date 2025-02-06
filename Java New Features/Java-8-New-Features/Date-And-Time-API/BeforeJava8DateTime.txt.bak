@@ -1,0 +1,28 @@
+
+								====================================
+									  Before Java-8 Date And Time API
+								====================================
+
+	-> In java we have 2 class that represent date and time 
+
+		1. java.sql.Date
+		2. java.util.Date 
+
+		-> when we perform any date and time related db operation then we use java.sql.Date package classes
+
+		-> when we perform any date and time related application then we use java.util.Date package classes
+
+		-> Before java-8 if we create Date class then here date with time also created 
+
+		-> If we want to time only then we convert them manually using SimpleDateFormat
+
+	java.text.SimpleDateFormat
+
+		-> SimpleDateFormat is predefine class that present in java.text package
+
+		-> These classes are provide the method for Date conversion
+
+		1. Date To String Conversion		=> String format (Date date)
+		2. String To Date Conversion		=> Date parse (String str)
+
+

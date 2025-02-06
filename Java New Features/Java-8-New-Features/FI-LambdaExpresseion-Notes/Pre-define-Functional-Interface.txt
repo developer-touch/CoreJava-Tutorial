@@ -1,0 +1,59 @@
+
+										==============================
+											Pre-define Functional Interface
+										==============================
+
+	1. Predicates 
+		-> It is a pre-define functional interface tha from java 1.8
+		-> It is used to take input and return values only true or false
+		-> It has only one abstract method that is ' test(-) '
+
+		@FunctionalInterface
+		public interface Predicate {
+			public abstract void test(T t);
+		}
+
+	2. Predicate Joining 
+		-> It is used to take two input and return values only true or false
+		-> It have two default method 
+			and()
+			or ()
+
+	3. Supplier
+		-> It is also a pre-define functional interface from java 1.8
+		-> It contains only return value doesn't contains inputs
+		-> It has only one abstract method that ' get() '
+
+	4. Consumer 
+		-> It is also a pre-define functional interface from java 1.8
+		-> It contains only input but not doesn;t return any value
+		-> it has only one abstract method that is accept (T t)
+		-> It as one defualt method that is forEach and its parameter is Predicates 
+			forEach(Consumer consumer types)
+
+	5. BiConsumer 
+		-> It contain two input and doesn;t return value
+
+	6. Function
+		-> It is also a pre-define functional interface from java 1.8
+		-> It contains input and return a value
+		-> It contains only one abstract method that is ' apply '
+			@FunctionalInterface
+			interface Function <R,T> {
+				R apply(T t);
+			}
+
+	Conculsion =>
+
+	============================================================================
+		Predicate		------->	Take input			------>	return true or false	-------> test()	
+		BiPredicates     ------->	Tale 2 inputs		------>	return true or false	-------> test()
+
+		Supplier		------->	Doesn't take input	------>	return value		-------> get()
+		
+		Consumer		------->	Take input			------>	doesn't return		-------> accept()
+		BiConsumer	------->	Take 2 inputs		------>	doesn't return		-------> accept()
+
+		Function		------->	Take input			------->	return value		--------> apply()
+		BiFuntion		------->	Takes 2 input		------->	return value		--------> apply()
+	==============================================================================

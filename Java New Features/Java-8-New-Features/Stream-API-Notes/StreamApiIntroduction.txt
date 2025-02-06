@@ -1,0 +1,21 @@
+
+										==========================
+												 Stream API 
+										==========================
+
+	=> Stream API is the sequence of elements that is comes from any Source 
+	
+	=> Here Source may be arrays or collections
+
+	=> Stream API is used to process the date and return the value
+
+	=> Stream API is not a Data Structure. It is bunch of operation that apply on the source 
+
+	=> It will not change the oroginal structure of the source
+
+	=> Just it take data of source and process that source data
+
+	STREAM CREATION 
+		=> We can create Stream in 2 ways-
+		   1. using the stream.of(e1,e2,.....)
+		   2. using stream() method

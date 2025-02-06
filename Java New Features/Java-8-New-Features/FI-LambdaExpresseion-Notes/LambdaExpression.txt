@@ -1,0 +1,48 @@
+		
+								=========================
+								         Lambda Expression
+								=========================
+
+	=> A Lambda Expression is an anonymous function that doesn't contains
+		-> modifiers
+		-> return type
+		-> method names
+
+	=> It is used to implementing one functional interface 
+
+	=> A Lambda Expression contains two parts connected by lambda operator ' -> '
+		1. parameters
+		2. body 
+
+	=> A Lambda Expression is an implementation of one Functional Interface method
+
+	=> A LE internal 'name,parameter, return' must same as its implementing ' FI method
+	     name , parameters and return type '
+
+	=> Lambda Expression creation llogic is not executed automatically by JVM
+
+
+	What are the diiferent ways of creating Lambda Exppression ?
+	-----------------------------------------------------------------------------------
+		( ) -> { };
+		(p) -> { };
+		(p1,p2) -> { };
+
+		( ) -> { return value/objects;};
+		(p1) -> { return value/objects;};
+		(p1,p2) -> { return value/objects;};
+
+	Short-Cuts for creating Lambda Expresson 
+	----------------------------------------------------------
+		1. no body
+			( ) -> {multiple statements;};
+			( ) -> one statement ;
+		
+		2. No Parenthesis
+			(a) -> one statements;
+			 a  -> one statement;
+
+		3. No return body and return keyword
+			( ) -> {return value/object/expression;};
+			( ) -> value /object;
+

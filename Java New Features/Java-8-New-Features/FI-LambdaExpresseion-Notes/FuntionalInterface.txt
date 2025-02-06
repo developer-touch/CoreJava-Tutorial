@@ -1,0 +1,49 @@
+								=============================
+									    Functional Interface
+								=============================
+
+	-> An interface that contains only one abstract method is called Functional Interface
+
+	-> A single abstract method interface is called Functional Interface
+
+	-> A Functional Interface  used to developing a Lambda Expression for passing logic
+	    directly as argument to a method without creating separate class and object 
+
+	-> A Functional interface is created by using the keyword interrface but it must have
+	    only one 'abstract method'
+
+	-> It can hava 'n' number of default and static and private methods
+
+	-> We can stoped adding more method in side funtional interface by using the annotation
+	    ' @FunctionalInterface'
+
+	-> @FunctionalInterface is allowed only one abstract method inside the inteface and it 
+	    marked with a function as FunctionalInterfacr
+
+
+	How can we implements a Functional Interface ?
+		1. By using the outer class
+		2. By using the anonymous inner class
+		3. By using the Lambda Expression 
+		4. By using the method reference 
+
+
+	Examlpe of Functional Interface
+	-------------------------------------------
+	1.	interface Addition {	
+			public void add(int a,int b);
+		}
+
+		@FunctionalInterface
+	2.	interface Addition {
+			public void add(int a,int b);
+		}
+
+		@FunctionalInterface
+	3.	interface Calculator {
+			public void calculate(int a,int b);
+		}
+
+		interface Addition extends Calculator{
+			
+		}

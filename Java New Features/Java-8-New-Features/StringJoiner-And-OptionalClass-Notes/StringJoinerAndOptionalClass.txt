@@ -1,0 +1,26 @@
+				
+								=========================
+									    STRINGJOINER
+								=========================
+
+	What Is StringJoiner ?
+
+		-> StringJoiner is used to add more string with specified delimeter .
+
+		-> StringJoiner is present in java.util.StringJoiner package
+
+		-> We can also used StringJoiner as concat prefix and sufix while StringJoing
+
+	=> StringJoiner have 2 method
+
+		StringJoiner sj = new StringJoiner (CharSequence delim);
+
+		StringJoiner sj = new StringJoiner (CharSequence delim, CharSequence prefix, CharSequence suffix)
+
+	What Is Optional Class ?
+		
+		-> Optional class is used to avoid the NullPointerException in the program 
+
+		-> when we perform any operation on the null value then we get NullPointerExcception 
+
+		-> In optional class first we check data present or not then we perform any operation
