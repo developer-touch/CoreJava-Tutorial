@@ -1,0 +1,6 @@
+package com.nit.basics;
+class ClassPathDemo{
+	public String sayHello(String user){
+		return "GooodMoring"+user;
+	}
+}

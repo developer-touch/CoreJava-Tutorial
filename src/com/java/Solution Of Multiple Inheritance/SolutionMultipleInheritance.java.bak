@@ -1,0 +1,30 @@
+/**
+	How can interface solve multiple inheritance problem ?
+	------------------------------------------------------
+	1.interface doesn't have constructor 
+	2.interface contains only abstract method, it must be override in sub class
+	3.in sub class super keyword doesn't reference to interface, it refer to the one and 
+	  only the super class
+
+*/
+
+interface Vehicle {
+	abstract void printDetails();
+}
+interface Software {
+	abstract void printDetails();
+}
+
+class TATA implements Vehicle,Software{
+
+	public void printDetails(){
+		System.out.println("Executed From TATA");
+	}
+
+	TATA(){
+		super();
+	}
+	public void showtDetails(){
+		printDetails();
+	}
+}	

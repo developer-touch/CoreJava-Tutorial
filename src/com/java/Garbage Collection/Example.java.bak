@@ -1,0 +1,13 @@
+class Example{
+
+	private int x;
+	 Example() {
+		x = 10;
+		System.out.pritnln("Ex constructor :: "+this);
+	 }
+
+	 @Override 
+	 protected void finalize(){
+		System.out.println("In finalize :: "+this);
+	 }
+}

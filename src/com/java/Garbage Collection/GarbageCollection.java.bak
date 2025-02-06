@@ -1,0 +1,36 @@
+/**
+	Garbage Collection 
+	------------------
+	1.What is garbage collection ?
+	  ->The process of destroyed unreferenced or unused objects from JVM from Heap Area 
+	    is called garbage collection.
+
+	Here grabage means				-> unreferenced object
+	Here garbage collection means	-> removing or deleting 
+
+	2.Why garbage collection ?
+	 ->For destroyed unreferenced object from Heap area and makin heap area free for 
+	   creating new object .
+
+	3.What will happen we do destroy object ?
+	  ->It leads to an exception OOME.
+
+	  ->If we don't destroy unreferenced object from heap area at somme point of time
+	    heap area is filled, we can't create new object and then JVM is terminated with
+		an exception java.lang.OutOfMemoryException(OOME).
+	
+	4.Who is responsible to do garbage collection ?
+	  ->JVM is responsible to do garbage collection, means destroying object unreferenced
+	    obejct.
+
+	5.What is the responsiblity of a developer ?
+	  ->In java,Developer is only responsible for 
+	    1.creating object
+		2.using that object for representing operation 
+		3.finally unreferenced objects after its usage.
+
+	 ->When we unreferenced an object,JVM will take care of destroying those unreferenced
+	   object implicitly.
+
+*/
+package com.java.GarbageCollection;
